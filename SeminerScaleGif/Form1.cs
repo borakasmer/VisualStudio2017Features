@@ -68,7 +68,7 @@ namespace SeminerScaleGif
                 {
                     try
                     {
-                        throw new DivideByZeroException();
+ //                       throw new DivideByZeroException();
                         switch (fileType)
                         {
                             case Gif t:
