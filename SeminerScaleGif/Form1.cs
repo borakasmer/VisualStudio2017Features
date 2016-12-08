@@ -77,7 +77,8 @@ namespace SeminerScaleGif
                                     {
                                         collection.Coalesce();
                                         MagickGeometry size = new MagickGeometry(t.Width, t.Height);
-                                        size.IgnoreAspectRatio = false;
+                                        //size.IgnoreAspectRatio = false;
+                                        size.IgnoreAspectRatio = true;
 
                                         foreach (MagickImage image in collection)
                                         {
@@ -98,7 +99,8 @@ namespace SeminerScaleGif
                                     using (MagickImage image = new MagickImage(fileName))
                                     {
                                         MagickGeometry size = new MagickGeometry(t.Width, t.Height);
-                                        size.IgnoreAspectRatio = false;
+                                        //size.IgnoreAspectRatio = false;
+                                        size.IgnoreAspectRatio = true;
                                         image.Resize(size);
                                         string imageName = GetFileName(t);
                                         image.Write(imageName);
